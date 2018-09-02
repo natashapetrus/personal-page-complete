@@ -1,0 +1,91 @@
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+TO RUN JEKYLL SITE LOCALLY:
+
+Add this to Gemfile
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+
+Then using Git Bash, navigate to root and do 'bundle install'
+Also do 'bundle update' ocassionally
+To run, do 'bundle exec jekyll serve'
+
+NOTE: Jekyll will overwrite the _site folder, so make sure you have what you need, e.g.
+make sure CNAME and other important files are not deleted
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+TO USE MINIBUNDLE (alternative to Gulp concat + jekyll-assets):
+
+Simply include this block (no tabs!) --replace 'js' with css for bundling stylesheets:
+    {% minibundle js %}
+    source_dir: _assets/js
+    destination_path: assets
+    minifier_cmd: node_modules/uglifyjs/bin/uglifyjs
+    assets:
+      - mo.min
+      - jquery-2.1.4.min
+      - bootstrap.min
+      - owl.carousel.min
+      - magnific-popup.min
+      - circle-progress.min
+      - main
+    attributes:
+      id: my-scripts
+    {% endminibundle %}
+
+or put minifier command inside the _config.yml like this:
+minibundle:
+  minifier_commands:
+    css:   node_modules/.bin/uglifycss
+    js:   node_modules/.bin/uglifyjs
+(note: to get the minifier, do npm install uglifyjs and npm install uglifycss,
+then retrieve the folders/files from node_modules)
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+TO USE GULP (for bundling):
+
+Create gulpfile.js consisting of concatJS and concatCSS tasks (using sass and gulp-concat)
+and don't forget to exclude it in _config.yml like this:
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+
+Run 'gulp' for default task, or e.g. gulp taskName for any other tasks.
+Current setup: run 'gulp clean' to delete all.js and all.scss, then run 'gulp' to concat JS
+	and CSS (followed by jekyll to build to _site)
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+TO USE JEKYLL-ASSETS:
+
+Rename all .css files to .scss (sass compatibility)
+
+To minify, put this inside the _config.yml file:
+compression: true
+assets:
+  compress:
+    css:  sass
+    js:   uglifier
+(note: sass and uglifier must be installed)
+
+Then put this to include files in html:
+	<!-- Google Fonts -->
+	{% css fonts.googleapis.com.josefin.min.css %}
+
+	<!-- Stylesheets -->
+	{% css bootstrap.min.css %}
+	{% css font-awesome.min.css %}
+	{% css owl.carousel.min.css %}
+	{% css magnific-popup.min.css %}
+	{% css style.css %}
+
+	<!--====== Javascripts & Jquery ======-->
+	{% js mo.min.js %}
+	{% js jquery-2.1.4.min.js %}
+	{% js bootstrap.min.js %}
+	{% js owl.carousel.min.js %}
+	{% js magnific-popup.min.js %}
+	{% js circle-progress.min.js %}
+	{% js main.js %}
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
