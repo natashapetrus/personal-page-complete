@@ -3,6 +3,7 @@
 https://natashapetrus.com/
 
 #### :fire: Generated with:
+* [Gulp](https://gulpjs.com/)
 * [Jekyll](https://jekyllrb.com/)
   * [jekyll-assets](https://github.com/envygeeks/jekyll-assets)
   * [jekyll-minibundle](https://github.com/tkareine/jekyll-minibundle)
