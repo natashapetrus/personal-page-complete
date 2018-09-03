@@ -7,6 +7,8 @@ https://natashapetrus.com/
 * [Jekyll](https://jekyllrb.com/)
   * [jekyll-assets](https://github.com/envygeeks/jekyll-assets)
   * [jekyll-minibundle](https://github.com/tkareine/jekyll-minibundle)
+  * [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+  * [jekyll-last-modified-at](https://github.com/gjtorikian/jekyll-last-modified-at)
 * [uglifier](https://github.com/lautis/uglifier)
 * [sass](https://github.com/sass/ruby-sass)
 
