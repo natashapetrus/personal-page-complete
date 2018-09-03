@@ -35,14 +35,15 @@ gulp.task('concatCSS', () => {
     ])
     .pipe(sass())
     .pipe(concat('all.css'))
-    // hack so jekyll-assets can resolve this file
-    .pipe(replace(/url\(.*modified\.png\)/gi, function () {
-      return 'url(asset_path(\'modified.png\'))';
-    }))
-    .pipe(replace(/asset_url\(.*modified\.png.*\)/gi, function () {
-      return 'url(asset_path(\'modified.png\'))';
-    }))
-    // end
+    // sample hack so jekyll-assets can resolve a file
+    // if the src is replaced with relative url to all.scss
+    // .pipe(replace(/url\(.*modified\.png\)/gi, function () {
+    //   return 'url(asset_path(\'modified.png\'))';
+    // }))
+    // .pipe(replace(/asset_url\(.*modified\.png.*\)/gi, function () {
+    //   return 'url(asset_path(\'modified.png\'))';
+    // }))
+    // end block
     .pipe(rename({
       extname: '.scss'
     }))    
