@@ -7,6 +7,9 @@ assets:
     - _assets/img
     - _assets/img/bg
     - _assets/img/icon
+    - _assets/fonts
+    - _assets/fonts/font-awesome
+    - _assets/fonts/josefin-sans
   features:
     automatic_img_alt: true
     automatic_img_size: false
