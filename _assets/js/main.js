@@ -265,6 +265,22 @@ if($().circleProgress){
         	$('.container-contact100').fadeOut(300);
 		}
 	});
+
+	/*==================================================================
+	Contact form */
+	var contactModel = function(){
+		var self = this;
+		self.senderName = ko.observable('');
+		self.senderEmail = ko.observable('');
+		self.messageSubject = ko.observable('');
+		self.senderMessage = ko.observable('');
+		self.url = ko.computed(function(){
+			return "mailto:hello@natashapetrus.com" +
+				"?subject=" + encodeURIComponent(self.messageSubject()) +
+				"&body=" + encodeURIComponent(self.senderMessage());
+		});
+	};
+	ko.applyBindings(contactModel, document.getElementById("contact-popup"));
 }
 
 })(jQuery);

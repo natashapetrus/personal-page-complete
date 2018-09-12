@@ -18,6 +18,7 @@ gulp.task('clean', function () {
 gulp.task('concatJS', () => {
   return gulp.src([
       '_assets/js/jquery-2.1.4.min.js',
+      '_assets/js/knockout-3.4.2.js',
       '_assets/js/bootstrap.min.js',
       '_assets/js/mo.min.js',
       '_assets/js/owl.carousel.min.js',

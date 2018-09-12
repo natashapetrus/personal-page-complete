@@ -566,7 +566,7 @@ layout: default
 	<!-- Contact button end -->
 
 	<!-- Contact pop-up start -->
-	<div class="container-contact100">
+	<div class="container-contact100" id="contact-popup">
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form"
 				action="https://formspree.io/hello@natashapetrus.com"
@@ -580,22 +580,22 @@ layout: default
 				</span>
 
 				<div class="wrap-input100 validate-input" data-validate="Required">
-					<input class="input100" type="text" name="name" placeholder="Name">
+					<input class="input100" type="text" name="name" placeholder="Name" data-bind="textInput: senderName">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Valid e-mail required">
-					<input class="input100" type="text" name="_replyto" placeholder="E-mail">
+					<input class="input100" type="text" name="_replyto" placeholder="E-mail" data-bind="textInput: senderEmail">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Required">
-					<input class="input100" type="text" name="_subject" placeholder="Subject">
+					<input class="input100" type="text" name="_subject" placeholder="Subject" data-bind="textInput: messageSubject">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Please leave a message">
-					<textarea class="input100" name="message" placeholder="Your message here"></textarea>
+					<textarea class="input100" name="message" placeholder="Your message here" data-bind="textInput: senderMessage"></textarea>
 					<span class="focus-input100"></span>
 				</div>
 				
@@ -604,7 +604,7 @@ layout: default
 				<span class="note-input100">
 					<small>Help me fight spams!</small>
 					<small>You will be taken to a reCAPTCHA page upon submission.</small><br />
-					<small>To send message from your favorite mail client instead, <a href="mailto:hello@natashapetrus.com">click here</a>.</small>
+					<small>To send message from your favorite mail client instead, <a data-bind="attr: { href: url }">click here</a>.</small>
 				</span>
 
 				<div class="container-contact100-form-btn">
