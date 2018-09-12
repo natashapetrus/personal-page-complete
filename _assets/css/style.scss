@@ -579,6 +579,10 @@ ol {
 /*---------------------
 	Review section
 -----------------------*/
+.review-section {
+	display: none; // if JS not enabled
+}
+
 .review-slider {
 	padding-left: 150px;
 }
@@ -986,6 +990,7 @@ ol {
 	SVG - Signature
 ----------------------*/
 .signature-wrapper {
+	display: none; // if JS not enabled
 	transform: scale(0.4);	
 	transform-origin: top left;	
 	-ms-transform: scale(0.4); /* IE 9 */	

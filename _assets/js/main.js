@@ -14,6 +14,25 @@
 		}
 		});
 
+
+	/*==================================================================
+	[ DOM rendered ] */
+	$(document).ready(function () {
+		// button behavior change on iOS
+		if (!navigator.userAgent.match(/(\(iPod|\(iPhone|\(iPad)/)) { // don't show contact form on iOS
+			$('a.btn-show-contact100,a.inline-show-contact100').attr("href", "javascript:void(0);");
+		}
+		// form submission success
+		if (document.URL.indexOf("success") !== -1){
+			$('html').css("overflow", "hidden");		
+			$(".container-success100").css("display", "table");
+		}
+		// show elements that are hidden if JS not enabled
+		$('.signature-wrapper').css("display", "block");
+		$('.review-section').css("display", "block");
+	  }); 
+	  
+
 	$(window).on('load', function() { 
 		/*------------------
 			Preloader
@@ -231,18 +250,6 @@ if($().circleProgress){
 		$('.container-success100').fadeOut(300);
 	});
 	
-	/*==================================================================
-	[ Form submission success and button behavior change on DOM rendered ] */
-	$(document).ready(function () {
-		if (!navigator.userAgent.match(/(\(iPod|\(iPhone|\(iPad)/)) { // don't show contact form on iOS
-			$('a.btn-show-contact100,a.inline-show-contact100').attr("href", "javascript:void(0);");
-		}
-		if (document.URL.indexOf("success") !== -1){
-			$('html').css("overflow", "hidden");		
-			$(".container-success100").css("display", "table");
-		}
-	  }); 
-
 	/*==================================================================
 	[ 404 ] */
 	$('#frown').hover(function (){

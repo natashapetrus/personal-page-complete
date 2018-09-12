@@ -11543,6 +11543,9 @@ ol {
 /*---------------------
 	Review section
 -----------------------*/
+.review-section {
+  display: none; }
+
 .review-slider {
   padding-left: 150px; }
 
@@ -11859,6 +11862,7 @@ ol {
 	SVG - Signature
 ----------------------*/
 .signature-wrapper {
+  display: none;
   transform: scale(0.4);
   transform-origin: top left;
   -ms-transform: scale(0.4);
