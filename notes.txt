@@ -1,17 +1,16 @@
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
-TO RUN JEKYLL SITE LOCALLY:
+DEPENDENCIES:
 
-Add this to Gemfile
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-
-Then using Git Bash, navigate to root and do 'bundle install'
-Also do 'bundle update' ocassionally
-To run, do 'bundle exec jekyll serve'
-
-NOTE: Jekyll will overwrite the _site folder, so make sure you have what you need, e.g.
-make sure CNAME and other important files are not deleted
+* Run all of the following as admin
+1. [OPTIONAL] Install chocolatey.org (package manager for easier installation and upgrade)
+2. Install NodeJS using `choco install nodejs`
+3. Install Ruby using `choco install ruby`
+4. Install Bundler (bundler.io) using `gem install bundler`
+5. Install http://www.msys2.org/ (`bundle install` and `bundle update` need this)
+6. Install gulp using `npm install gulp@3.9.1`
+7. Install other dependencies (i.e. gulp-concat, gulp-sass, gulp-string-replace,
+	gulp-rename, gulp-clean)
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
 TO USE MINIBUNDLE (alternative to Gulp concat + jekyll-assets):
@@ -87,5 +86,19 @@ Then put this to include files in html:
 	{% js magnific-popup.min.js %}
 	{% js circle-progress.min.js %}
 	{% js main.js %}
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+TO RUN JEKYLL SITE LOCALLY:
+
+Add this to Gemfile
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+
+Then using Git Bash, navigate to root and do 'bundle install'
+Also do 'bundle update' ocassionally
+To run, do 'bundle exec jekyll serve'
+
+NOTE: Jekyll will overwrite the _site folder, so make sure you have what you need, e.g.
+make sure CNAME and other important files are not deleted
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
