@@ -4,16 +4,17 @@ DEPENDENCIES:
 
 * Run all of the following as admin
 1. [OPTIONAL] Install chocolatey.org (package manager for easier installation and upgrade)
-2. Install NodeJS using `choco install nodejs`
-3. Install Ruby using `choco install ruby`
+2. Install NodeJS using `choco install nodejs --version 11.15.0`
+3. Install Ruby with Devkit (https://rubyinstaller.org/add-ons/devkit.html)
 4. Install Bundler (bundler.io) using `gem install bundler`
 5. Install http://www.msys2.org/ (`bundle install` and `bundle update` need this)
 6. Install gulp using `npm install gulp@3.9.1` (gulpfile.js is written for gulp v3)
-7. Install other dependencies (i.e. gulp-concat, gulp-sass, gulp-string-replace,
+7. Link gulp using `npm link gulp` to use the global version of gulp
+8. Install other dependencies (i.e. gulp-concat, gulp-sass, gulp-string-replace,
 	gulp-rename, gulp-clean)
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
-TO USE MINIBUNDLE (alternative to Gulp concat + jekyll-assets):
+[ALT 1] TO USE MINIBUNDLE (alternative to Gulp concat + jekyll-assets):
 
 Simply include this block (no tabs!) --replace 'js' with css for bundling stylesheets:
     {% minibundle js %}
@@ -41,7 +42,7 @@ minibundle:
 then retrieve the folders/files from node_modules)
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
-TO USE GULP (for bundling):
+[ALT 2 (1/2)] TO USE GULP (for bundling):
 
 Create gulpfile.js consisting of concatJS and concatCSS tasks (using sass and gulp-concat)
 and don't forget to exclude it in _config.yml like this:
@@ -55,7 +56,7 @@ Current setup: run 'gulp clean' to delete all.js and all.scss, then run 'gulp' t
 	and CSS (followed by jekyll to build to _site)
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
-TO USE JEKYLL-ASSETS:
+[ALT 2 (2/2)] TO USE JEKYLL-ASSETS:
 
 Rename all .css files to .scss (sass compatibility)
 
@@ -100,5 +101,14 @@ To run, do 'bundle exec jekyll serve'
 
 NOTE: Jekyll will overwrite the _site folder, so make sure you have what you need, e.g.
 make sure CNAME and other important files are not deleted
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+KNOWN ERRORS:
+
+1. ERROR: `ffi-1.9.25-x64-mingw32 requires ruby version < 2.6, which is incompatible with
+the current version, ruby 2.6.4p104` when running `bundle install`
+   SOLUTION: Simply run `bundle update` instead
+2. ERROR: `ReferenceError: primordials is not defined`
+   SOLUTION: Make sure to install and run NodeJS < v12
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
