@@ -1,0 +1,28 @@
+{
+  "name": "personal-page-complete",
+  "version": "1.0.0",
+  "description": "https://natashapetrus.com/",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-string-replace": "^1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natashapetrus/personal-page-complete.git"
+  },
+  "author": "Natasha T. Petrus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natashapetrus/personal-page-complete/issues"
+  },
+  "homepage": "https://github.com/natashapetrus/personal-page-complete#readme"
+}
