@@ -33,7 +33,7 @@ layout: default
 	<meta name="theme-color" content="#ffffff">
 
 	<!-- Stylesheets -->
-	{% css all.css %}
+	{% asset all.css %}
 
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -310,16 +310,16 @@ layout: default
 								<h2>About me</h2>
 								<ul>
 									<li><span>E-mail</span><a href="mailto:hello@natashapetrus.com">hello@natashapetrus.com</a></li>
-									<li><span>Address</span>Seattle, WA 98116, US</li>
-									<li><span>Current role(s)</span>Software Engineer at both</li>
-									<li><span></span><a href="https://www.geni.us/" target="_blank">Geniuslink</a>&nbsp;&amp;&nbsp;<a href="https://kit.com/" target="_blank">Kit.com</a></li>
+									<li><span>Address</span>Jakarta, Indonesia</li>
+									<li><span>Current role(s)</span>Full-Stack Engineer at both</li>
+									<li><span></span><a href="https://www.geni.us/" target="_blank">Geniuslink</a>&nbsp;&amp;&nbsp;<a href="https://kit.co/" target="_blank">Kit.co</a></li>
 									<li><span>Weakness</span>Matcha ice cream</li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-lg-6">
 							<figure class="hero-image">
-								{% img natasha-main.jpg alt:'' %}
+								{% asset natasha-main.jpg alt:'' %}
 							</figure>
 						</div>
 					</div>
@@ -361,25 +361,28 @@ layout: default
 					<ul class="resume-list">
 						<li>
 							<h2>2019&ndash;Present</h2>
-							<h3>Kit.com</h3>
-							<h4>Software Engineer</h4>
-							<p>Currently responsible for infrastructure migration, maintaining existing functionality, as well as implementing new features following Geniuslink's acquisition of Kit.com.</p>
+							<h3>Kit.co</h3>
+							<h4>Full-Stack Engineer</h4>
+							<p>Currently responsible for infrastructure migration, maintaining existing functionality,
+								as well as implementing new features following Geniuslink's acquisition of Kit.co (formerly Kit.com),
+								working remotely from Jakarta, Indonesia.</p>
 						</li>
 						<li>
 							<h2>2017&ndash;Present</h2>
 							<h3>Geniuslink</h3>
-							<h4>Software Engineer</h4>							
+							<h4>Full-Stack Engineer</h4>							
 							<small>(Formerly responsible for automating test cases and overseeing manual testing as Test Automation Engineer)</small>
 							<br />
 							<p>Now currently am responsible for Geniuslink's UI/UX, API, and service,
 								working closely with and reporting directly to both the CXO and the CTO.
+								Used to work at Geniuslink's HQ in Seattle, currently working remotely from Jakarta, Indonesia.
 							</p>
 						</li>
 						<li>
 							<h2>2017</h2>
 							<h3>HCL Technologies / Microsoft</h3>
 							<h4>Game Tester</h4>
-							<p>Worked within HCL Technologies' CERT lab to certify pre-released
+							<p>Worked within HCL Technologies' CERT lab to certify pre-released Xbox
 								games and the DLCs were up to specified software and platform standards.
 							</p>
 						</li>
@@ -532,7 +535,7 @@ layout: default
 						<div class="col-lg-3 col-md-6">
 							<div class="fact-box">
 								<div class="fact-content">
-									{% img 1-w.png alt:'' %}
+									{% asset 1-w.png alt:'' %}
 									<h2>7</h2>
 									<p>Projects Completed</p>
 								</div>
@@ -541,7 +544,7 @@ layout: default
 						<div class="col-lg-3 col-md-6">
 							<div class="fact-box">
 								<div class="fact-content">
-									{% img 2-w.png alt:'' %}
+									{% asset 2-w.png alt:'' %}
 									<h2>1</h2>
 									<p>Patent Pending</p>
 								</div>
@@ -660,5 +663,5 @@ layout: default
 
 
 	<!--====== Javascripts & Jquery ======-->
-	{% js all.js %}
+	{% asset all.js %}
 </body>

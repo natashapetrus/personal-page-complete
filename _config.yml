@@ -1,6 +1,7 @@
 url: https://natashapetrus.com
 compression: true
 assets:
+  digest: false
   sources:
     - _assets/css
     - _assets/js
