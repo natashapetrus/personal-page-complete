@@ -281,15 +281,15 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  github-pages
+  github-pages (~> 207)
   jekyll-assets (~> 3.0.0)
-  jekyll-last-modified-at
-  jekyll-minibundle
-  jekyll-sitemap
+  jekyll-last-modified-at (~> 1.3.0)
+  jekyll-minibundle (~> 3.0.0)
+  jekyll-sitemap (~> 1.4.0)
   rack (>= 2.1.4)
-  sass
+  sass (~> 3.7.4)
   sprockets (~> 3.7)
-  uglifier
+  uglifier (~> 4.2.0)
 
 BUNDLED WITH
    1.17.2

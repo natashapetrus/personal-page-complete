@@ -11,7 +11,7 @@ DEPENDENCIES:
 6. Install gulp using `npm install gulp@3.9.1` (gulpfile.js is written for gulp v3)
 7. Link gulp using `npm link gulp` to use the global version of gulp
 8. Install other dependencies (i.e. gulp-concat, gulp-sass, gulp-string-replace,
-	gulp-rename, gulp-clean)
+	gulp-rename, gulp-clean) by running `npm install` on root folder
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
 [ALT 1] TO USE MINIBUNDLE (alternative to Gulp concat + jekyll-assets):
@@ -95,12 +95,15 @@ Add this to Gemfile
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 
-Then using Git Bash, navigate to root and do 'bundle install'
-Also do 'bundle update' ocassionally
-To run, do 'bundle exec jekyll serve'
+Then using Git Bash, navigate to root and do `bundle install`
+Also do `bundle update` ocassionally
+To run, do `bundle exec jekyll serve`
 
 NOTE: Jekyll will overwrite the _site folder, so make sure you have what you need, e.g.
 make sure CNAME and other important files are not deleted
+
+To ensure the site is production ready, run `bundle exec jekyll build` before pushing changes.
+This will ensure that the sitemap is overwritten with the production url.
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
 KNOWN ERRORS:
